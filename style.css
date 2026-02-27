@@ -1,0 +1,253 @@
+ul {
+    padding-left: 1.2em;
+    list-style-type: disc;
+}
+ul ul {
+    padding-left: 1.2em;
+    list-style: square;
+}
+ol {
+    margin-left: 0px;
+    padding-left: 1.2em;
+}
+ol li{
+    padding-left: 1em;
+}
+ul li{
+    padding-left: 1.2em;
+}
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.info_row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    font-size: 18px;
+    align-items: flex-start;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column; 
+    gap: 5px;
+}
+
+.due-date {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.version.desktop-version {
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.total-points {
+    font-weight: bold; 
+    white-space: nowrap;
+}
+
+.section1 {
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.sections{
+    margin-top: 40px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.long {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+table tr th{
+    text-align: left;
+    font-weight: normal;
+}
+body {
+    font-family: 'Gill Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+}
+
+.container {
+    width: 800px;
+    margin: 10px auto;
+}
+
+ul li .code {
+    white-space: pre;
+    font-family: "Consolas", monospace;
+    font-weight: bold;
+    padding: 4px 8px;
+    margin: 10px 0;
+    margin-left: -40px;
+    padding-left: 80px; 
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+ul ul > li > .code {
+    white-space: pre;
+    font-family: "Consolas", monospace;
+    font-weight: bold;
+    padding: 4px 8px;
+    margin: 10px 0;
+    margin-left: -60px;
+    padding-left: 60px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.mobile-nav {
+    display: none;
+}
+.title-mobile {
+    display: none;
+}
+.title-desktop {
+    display: block;
+}
+.grading-table-mobile{
+    display: none;
+}
+.grading-table-desktop{
+    display: table;
+}
+
+@media screen and (max-width: 499px) {
+    body {
+        overflow-x: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px 80px; 
+    }
+    .title {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+    .subtitle {
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .info_row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 15px 0 10px 0;
+        font-size: 16px;
+        gap: 8px;
+    }
+    .left-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+    }
+    .due-date {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .version.desktop-version {
+        display: none;
+    }
+    .total-points {
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        justify-content: center;
+    }
+    .total-points::after {
+        content: "(version: 1)";
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+        white-space: nowrap;
+    }
+    .section1 {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .version {
+        text-align: center;
+    }
+    .mobile-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ebe3b5;
+        padding: 0;
+        margin: 0;
+        z-index: 9999;
+        height: auto;
+        min-height: 44px;
+        align-items: stretch;
+        flex-wrap: wrap;
+        border-top: none;
+        display: flex;
+    }
+    .mobile-nav a {
+        color: #0000FF;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        flex: 1 0 auto;
+        padding: 12px 20px;
+        white-space: nowrap;
+        display: inline-block;
+        background-color: #f4e79d;
+        font-family: 'Gill Sans';
+        line-height: 1.2;
+        letter-spacing: normal;
+    }    
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-bottom: 60px;
+    }
+    .grading-table-desktop {
+        display: none;
+    }
+    .grading-table-mobile {
+        display: table;
+    }
+    .correctness-header {
+        background-color: #ADD8E6;
+        font-weight: bold;
+    }
+    .title-desktop {
+        display: none;
+    }
+    .title-mobile {
+        display: block;
+    }
+
+}
